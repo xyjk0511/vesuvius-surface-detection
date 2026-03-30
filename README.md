@@ -1,5 +1,20 @@
 # Vesuvius Surface Detection / 维苏威古卷表面分割
 
+![Python](https://img.shields.io/badge/Python-3D%20Segmentation-blue)
+![Competition](https://img.shields.io/badge/Kaggle-Vesuvius%20Challenge-20BEFF)
+![Val%20Dice](https://img.shields.io/badge/Val%20Dice-0.571%2B-success)
+![Leaderboard](https://img.shields.io/badge/LB-0.524-orange)
+
+## At a glance / 项目速览
+
+| Item | Summary |
+|------|---------|
+| Task | 3D surface segmentation from CT volumes / 基于 CT 体数据的 3D 表面分割 |
+| Competition metric | TopoScore + SurfaceDice + VOI_score |
+| Best validation result | **0.5710+** |
+| Best public LB | **0.524** |
+| Project value | 3D segmentation, nnUNet, evaluation-aware postprocessing |
+
 3D surface segmentation pipeline for the **Kaggle Vesuvius Challenge - Surface Detection**, built through iterative experimentation from custom 2.5D baselines to nnUNetv2 / ResEnc L.
 
 一个面向 **Kaggle Vesuvius Challenge - Surface Detection** 的 3D 表面分割项目，记录了从自定义 2.5D 基线到 nnUNetv2 / ResEnc L 的完整迭代过程。
