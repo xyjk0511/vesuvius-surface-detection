@@ -17,6 +17,10 @@
 
 ![Vesuvius summary card](assets/summary-card.svg)
 
+### Visual snapshot / 可视化结果
+
+![Vesuvius results poster](assets/results-poster.svg)
+
 3D surface segmentation pipeline for the **Kaggle Vesuvius Challenge - Surface Detection**, built through iterative experimentation from custom 2.5D baselines to nnUNetv2 / ResEnc L.
 
 一个面向 **Kaggle Vesuvius Challenge - Surface Detection** 的 3D 表面分割项目，记录了从自定义 2.5D 基线到 nnUNetv2 / ResEnc L 的完整迭代过程。

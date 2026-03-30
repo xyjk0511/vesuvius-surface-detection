@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f8fafc"/>
+  <rect x="24" y="24" width="1152" height="652" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="52" y="74" font-size="38" font-family="Arial" font-weight="700" fill="#0f172a">Vesuvius Surface Detection — Project Results</text>
+  <text x="52" y="110" font-size="19" font-family="Arial" fill="#475569">Kaggle Vesuvius Challenge · 3D CT surface segmentation · evaluation-aware optimization</text>
+
+  <rect x="52" y="140" width="250" height="120" rx="18" fill="#eff6ff"/>
+  <text x="74" y="180" font-size="18" font-family="Arial" fill="#1d4ed8">Best Public LB</text>
+  <text x="74" y="228" font-size="46" font-family="Arial" font-weight="700" fill="#1e3a8a">0.524</text>
+
+  <rect x="328" y="140" width="250" height="120" rx="18" fill="#f0fdf4"/>
+  <text x="350" y="180" font-size="18" font-family="Arial" fill="#15803d">Best Validation Dice</text>
+  <text x="350" y="228" font-size="46" font-family="Arial" font-weight="700" fill="#166534">0.571+</text>
+
+  <rect x="604" y="140" width="250" height="120" rx="18" fill="#fff7ed"/>
+  <text x="626" y="180" font-size="18" font-family="Arial" fill="#c2410c">Competition Metric</text>
+  <text x="626" y="214" font-size="24" font-family="Arial" font-weight="700" fill="#9a3412">Topo + SurfaceDice + VOI</text>
+  <text x="626" y="240" font-size="15" font-family="Arial" fill="#9a3412">0.30 / 0.35 / 0.35 weighted score</text>
+
+  <rect x="880" y="140" width="244" height="120" rx="18" fill="#faf5ff"/>
+  <text x="902" y="180" font-size="18" font-family="Arial" fill="#7e22ce">Platforms</text>
+  <text x="902" y="214" font-size="24" font-family="Arial" font-weight="700" fill="#6b21a8">Kaggle 2×T4 · Colab L4</text>
+  <text x="902" y="240" font-size="15" font-family="Arial" fill="#6b21a8">Checkpoint resume + DDP workflow</text>
+
+  <text x="52" y="314" font-size="26" font-family="Arial" font-weight="700" fill="#0f172a">Model Evolution</text>
+
+  <line x1="86" y1="396" x2="1110" y2="396" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+
+  <circle cx="140" cy="396" r="18" fill="#93c5fd"/>
+  <rect x="74" y="430" width="160" height="138" rx="16" fill="#eff6ff"/>
+  <text x="96" y="464" font-size="20" font-family="Arial" font-weight="700" fill="#1e3a8a">Stage 1</text>
+  <text x="96" y="494" font-size="18" font-family="Arial" fill="#1e3a8a">Custom Keras 2.5D U-Net</text>
+  <text x="96" y="528" font-size="34" font-family="Arial" font-weight="700" fill="#1e3a8a">0.2828</text>
+  <text x="96" y="555" font-size="15" font-family="Arial" fill="#475569">Early baseline</text>
+
+  <circle cx="420" cy="396" r="18" fill="#86efac"/>
+  <rect x="340" y="430" width="180" height="138" rx="16" fill="#f0fdf4"/>
+  <text x="362" y="464" font-size="20" font-family="Arial" font-weight="700" fill="#166534">Stage 2</text>
+  <text x="362" y="494" font-size="18" font-family="Arial" fill="#166534">PyTorch SMP + encoder</text>
+  <text x="362" y="528" font-size="34" font-family="Arial" font-weight="700" fill="#166534">0.4342</text>
+  <text x="362" y="555" font-size="15" font-family="Arial" fill="#475569">Stronger 2D / 2.5D baseline</text>
+
+  <circle cx="700" cy="396" r="18" fill="#fdba74"/>
+  <rect x="614" y="430" width="180" height="138" rx="16" fill="#fff7ed"/>
+  <text x="636" y="464" font-size="20" font-family="Arial" font-weight="700" fill="#9a3412">Stage 3</text>
+  <text x="636" y="494" font-size="18" font-family="Arial" fill="#9a3412">nnUNetv2 3D Fullres</text>
+  <text x="636" y="528" font-size="34" font-family="Arial" font-weight="700" fill="#9a3412">0.527</text>
+  <text x="636" y="555" font-size="15" font-family="Arial" fill="#475569">Shift to true 3D segmentation</text>
+
+  <circle cx="980" cy="396" r="18" fill="#c4b5fd"/>
+  <rect x="884" y="430" width="210" height="138" rx="16" fill="#faf5ff"/>
+  <text x="906" y="464" font-size="20" font-family="Arial" font-weight="700" fill="#6b21a8">Stage 4</text>
+  <text x="906" y="494" font-size="18" font-family="Arial" fill="#6b21a8">ResEnc L + merged data</text>
+  <text x="906" y="528" font-size="34" font-family="Arial" font-weight="700" fill="#6b21a8">0.571+</text>
+  <text x="906" y="555" font-size="15" font-family="Arial" fill="#475569">Best validation regime</text>
+
+  <text x="52" y="624" font-size="18" font-family="Arial" fill="#334155">Key takeaway: the project improved by changing architecture-task alignment, scaling data, and optimizing threshold / postprocessing for the actual competition metric.</text>
+</svg>
