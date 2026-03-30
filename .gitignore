@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Large data / generated artifacts
+data/
+results/
+artifacts/
+outputs/
+checkpoints/
+*.npy
+*.npz
+*.nii
+*.nii.gz
+*.tif
+*.tiff
+*.zip
+
+# Original local competition workspace directories
+nnUNet_raw/
+nnUNet_preprocessed/
+new_data/
+val_samples_d101/
+validation-samples/
+validation_samples/
+vesuvius-challenge-surface-detection/
+
+# Logs / temp
+*.log
+debug.log
+tmp_*
+nul
+
+# IDE / AI tools
+.vscode/
+.idea/
+.claude/
+.codex/
+.agents/
+openspec/
+.planning/
+
+# OS
+.DS_Store
+Thumbs.db
