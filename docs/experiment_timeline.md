@@ -4,7 +4,7 @@
 
 - **竞赛**: Vesuvius Challenge - Surface Detection
 - **目标**: 从 3D 体数据（TIF 格式）中预测表面掩码
-- **评估指标**: Dice Score
+- **评估指标**: 竞赛评分 = 0.30 * TopoScore + 0.35 * SurfaceDice + 0.35 * VOI_score；本地训练监控用 Dice
 
 ---
 
