@@ -17,7 +17,7 @@ pred = np.transpose(pred, (2, 1, 0))
 **每次写提交脚本必须检查**：
 1. 读取 npz 概率图后，**不要转置**
 2. 读取 nii.gz 分割结果后，**不要转置**
-3. 用 `grep -r "np.transpose(pred" active/` 检查所有脚本
+3. 用 `grep -r "np.transpose(pred" src/` 检查所有脚本
 
 **验证方法**：测试两种方式，选择 Dice 更高的
 ```python
@@ -36,8 +36,8 @@ dice_trans = dice_score(np.transpose(pred, (2,1,0)), label)
 **Top 10 分数**: 0.574-0.578
 **差距**: 约 0.05
 **剩余时间**: 3天 (截止 2026-02-13)
-**详细进度**: 查看 `PROGRESS.md`
-**每次修改完**: 更新最新内容到 `PROGRESS.md`，清理tmp文件
+**详细进度**: 查看 `docs/experiment_timeline.md`
+**每次修改完**: 更新最新内容到 `docs/experiment_timeline.md`，清理tmp文件
 
 ---
 
@@ -115,25 +115,25 @@ Score = 0.30 * TopoScore + 0.35 * SurfaceDice + 0.35 * VOI_score
 
 **结论**: 集成效果差，单 Fold 0 + TTA 最佳
 
-## 关键脚本 (active/)
+## 关键脚本 (src/)
 
 ### 提交
-- `submit_resenc_l_v2.py` - ResEnc L 提交 (阈值0.25, TTA)
-- `submit_resenc_l_threshold_test.py` - ResEnc L 提交测试
+- `src/inference/submit_resenc_l_v2.py` - ResEnc L 提交 (阈值0.25, TTA)
+- `submit_resenc_l_threshold_test.py` - 已不在仓库
 
 ### 训练
-- `continue_2540_resenc.py` - Kaggle 继续训练 (2xT4 DDP)
-- `colab_continue_2540_resenc.py` - Colab 继续训练
+- `src/training/continue_2540_resenc.py` - Kaggle 继续训练 (2xT4 DDP)
+- `colab_continue_2540_resenc.py` - 已不在仓库
 
 ### 验证
-- `validate_resenc_threshold.py` - 主力验证脚本
-- `validate_806_baseline.py` - 806基线验证
-- `validate_compare_models.py` - 模型对比
+- `src/analysis/validate_resenc_threshold.py` - 主力验证脚本
+- `validate_806_baseline.py` - 已不在仓库
+- `validate_compare_models.py` - 已不在仓库
 
 ### 工具
-- `merge_datasets.py` - 数据合并
-- `make_val_samples.py` - 制作验证数据集
-- `postprocess_voi_topo.py` - 评估指标源码
+- `merge_datasets.py` - 已不在仓库
+- `make_val_samples.py` - 已不在仓库
+- `src/analysis/postprocess_voi_topo.py` - 评估指标源码
 
 ## 推理配置
 
@@ -167,7 +167,7 @@ def postprocess_prediction(pred, min_size=100):
             pred[labeled == (i+1)] = 0
 
     # 2. 填充小孔洞 (单fold用，集成不用)
-    # ... 详见 PROGRESS.md
+    # ... 详见 docs/experiment_timeline.md
     return pred
 ```
 
@@ -182,14 +182,14 @@ def postprocess_prediction(pred, min_size=100):
 
 ```
 D:\local kaggle\
-├── active/           # 当前使用的脚本
+├── src/              # 当前使用的源代码与脚本
 ├── archive/          # 历史版本 (Keras/PyTorch SMP)
 ├── docs/             # 文档
 ├── nnunet_scripts/   # nnUNet 训练脚本
 ├── nnUNet_raw/       # 原始数据
 ├── nnUNet_preprocessed/  # 预处理数据
 ├── CLAUDE.md         # 本文件
-└── PROGRESS.md       # 详细进度
+└── docs/experiment_timeline.md  # 详细进度
 ```
 
 
